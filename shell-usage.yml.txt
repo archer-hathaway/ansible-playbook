@@ -1,0 +1,10 @@
+---
+- name: using shell command to run scripts on remote hosts
+  hosts: all
+  tasks: 
+    - name: shell commands with arguments
+      shell: testExample.sh
+      args:
+        # change directory before executing the script
+        chdir: /usr/example/storeHere
+  

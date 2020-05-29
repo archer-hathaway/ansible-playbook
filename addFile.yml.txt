@@ -1,0 +1,9 @@
+---
+- name: add a file to remote hosts
+  hosts: all
+  tasks: 
+    - name: adding file using the file module
+      file:
+        #path to place the addFile.txt file
+        path: /root/addFile.txt
+        state: touch  

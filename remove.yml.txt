@@ -1,0 +1,9 @@
+---
+- name: remove a file from the remote hosts
+  hosts: all
+  tasks: 
+    - name: removing file using the file module
+      file:
+        #path that holds addFile.txt file
+        path: /root/addFile.txt
+        state: absent  
