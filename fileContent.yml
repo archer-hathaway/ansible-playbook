@@ -1,0 +1,10 @@
+---
+- hosts:remoteHost.com
+  tasks:
+    - name: use slurp to get content of specific file
+      slurp: 
+        src: /path/remotehosts/exampleFile.txt
+      register: path
+    - debug:
+        msg: "{{ path['content'] | b64decode }}"  
+     
