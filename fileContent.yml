@@ -1,5 +1,5 @@
 ---
-- hosts:remoteHost.com
+- hosts: remoteHost.com
   tasks:
     - name: use slurp to get content of specific file
       slurp: 
